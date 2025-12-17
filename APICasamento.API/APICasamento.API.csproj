@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APICasamento.Application\APICasamento.Application.csproj" />
+    <ProjectReference Include="..\APICasamento.Infrastructure\APICasamento.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
