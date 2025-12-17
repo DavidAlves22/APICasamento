@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\APICasamento.Application\APICasamento.Application.csproj" />
+    <ProjectReference Include="..\APICasamento.Domain\APICasamento.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
