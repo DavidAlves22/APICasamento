@@ -7,12 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Autenticacao\Commands\" />
-    <Folder Include="Autenticacao\Interfaces\" />
-    <Folder Include="Autenticacao\UseCases\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\APICasamento.Domain\APICasamento.Domain.csproj" />
   </ItemGroup>
 
