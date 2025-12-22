@@ -1,6 +1,6 @@
 ﻿using APICasamento.Domain.Entities;
 
-namespace APICasamento.Application.Repositories;
+namespace APICasamento.Application.Casamentos.Interfaces;
 
 public interface ICasamentoRepository
 {

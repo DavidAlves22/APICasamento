@@ -25,6 +25,6 @@ app.UseAuthorization();
 
 //Mapeamento dos endpoints
 app.MapGet("/public", () => Results.Ok("Este é um endpoint público. Qualquer um pode acessá-lo.")).AllowAnonymous();
-app.MapCasamentoEndpoints();
+app.MapCasamentoEndPoints();
 
 app.Run();

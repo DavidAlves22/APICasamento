@@ -1,12 +1,13 @@
-﻿using APICasamento.Application.DTOs;
-using APICasamento.Application.UseCases.CasamentoUseCases;
+﻿using APICasamento.API.DTOs.Casamento;
+using APICasamento.Application.Casamentos.Commands;
+using APICasamento.Application.Casamentos.UseCases;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APICasamento.API.EndPoints
 {
-    public static class CasamentoEndpoint
+    public static class CasamentoEndPoint
     {
-        public static void MapCasamentoEndpoints(this IEndpointRouteBuilder app)
+        public static void MapCasamentoEndPoints(this IEndpointRouteBuilder app)
         {
             app.MapGet("api/casamento", () =>
             {
@@ -24,7 +25,15 @@ namespace APICasamento.API.EndPoints
 
             app.MapPost("api/casamentos", async ([FromBody] CriarCasamentoDTO casamentoDTO, CriarCasamentoUseCase useCase) =>
             {
-                var novoId = await useCase.ExecutarAsync(casamentoDTO);
+                var command = new CriarCasamentoCommand(
+                   casamentoDTO.NomeNoivo,
+                   casamentoDTO.NomeNoiva,
+                   casamentoDTO.DataCasamento,
+                   casamentoDTO.LocalCerimonia,
+                   casamentoDTO.LocalCelebracao
+                );
+
+                var novoId = await useCase.ExecutarAsync(command);
 
                 return Results.Created($"api/casamentos/{novoId}", "Casamento criado com sucesso");
             })

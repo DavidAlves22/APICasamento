@@ -1,4 +1,4 @@
-﻿using APICasamento.Application.Repositories;
+﻿using APICasamento.Application.Casamentos.Interfaces;
 using APICasamento.Domain.Entities;
 using APICasamento.Infrastructure.Mappers;
 using APICasamento.Infrastructure.Models;

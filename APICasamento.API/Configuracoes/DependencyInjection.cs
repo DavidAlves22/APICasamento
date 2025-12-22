@@ -1,5 +1,5 @@
-﻿using APICasamento.Application.Repositories;
-using APICasamento.Application.UseCases.CasamentoUseCases;
+﻿using APICasamento.Application.Casamentos.UseCases;
+using APICasamento.Application.Casamentos.Interfaces;
 using APICasamento.Infrastructure.Repositories;
 
 namespace APICasamento.API.Configuracoes
