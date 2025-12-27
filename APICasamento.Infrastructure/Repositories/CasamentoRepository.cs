@@ -7,11 +7,9 @@ namespace APICasamento.Infrastructure.Repositories
 {
     public class CasamentoRepository : ICasamentoRepository
     {
-        private static readonly List<CasamentoModel> _casamentos = new List<CasamentoModel>();
-
-        public CasamentoRepository() {
-
-            var casamento = new CasamentoModel
+        private static readonly List<CasamentoModel> _casamentos = new List<CasamentoModel>()
+        {
+            new CasamentoModel
             {
                 Id = 1,
                 NomeNoivo = "João Pedro",
@@ -19,10 +17,8 @@ namespace APICasamento.Infrastructure.Repositories
                 DataCasamento = new DateTime(2026, 10, 25),
                 LocalCerimonia = "Igreja Matriz",
                 LocalCelebracao = "Salão de Festas Felicidade"
-            };
-
-            _casamentos.Add(casamento);
-        }
+            }
+        };
 
         public Task<List<Casamento>> GetCasamentos()
         {

@@ -20,9 +20,23 @@ namespace APICasamento.API.Configuracoes
             services.AddScoped<IPasswordHasher, PasswordHasher>();
 
             //Use Cases
-            services.AddScoped<CriarCasamentoUseCase>();
+
+            #region Login
+
             services.AddScoped<LoginUseCase>();
             services.AddScoped<RegistrarUseCase>();
+
+            #endregion
+
+            #region Casamento
+
+            services.AddScoped<CriarCasamentoUseCase>();
+            services.AddScoped<AlterarCasamentoUseCase>();
+            services.AddScoped<ObterCasamentoUseCase>();
+            services.AddScoped<ObterCasamentoByIdUseCase>();
+            services.AddScoped<DeleteCasamentoUseCase>();
+            
+            #endregion
 
             return services;
         }
